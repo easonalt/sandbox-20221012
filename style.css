@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: rgb(50,50,50);
+    color: rgb(255,255,255);
+    padding-top: 400px;
+}
+
+.backtotop {
+    position:fixed;
+    bottom: 0;
+    padding: 10px 25px 10px 25px;
+    right: 100px;
+    z-index: 200;
+    background-color: rgba(40, 40, 40, 0.85);
+    cursor: pointer;
+}
+
+.header {
+    position: absolute;
+    font-size: 2em;
+    top: 0;
+    left: 0;
+    text-align: center;
+    vertical-align: middle;
+    background: rgb(20,20,20);
+    min-width: 100%;
+    padding-top: 50px;
+    height: 350px;
+}
+
+.header a {
+    color:rgb(75, 75, 75);
+    padding: 0px 8px 0px 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.header a:hover {
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.divider {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.container {
+    text-align: center;
+}
+
+hr {
+    width: 80%;
+    color: white;
+}
+
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background: rgb(75, 75, 75);
+    background-size: 100% 100%;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: rgb(40, 40, 40);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.common {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.uncommon {
+    color: rgb(103, 255, 116);
+    font-weight: bold;
+}
+.rare {
+    color: rgb(255, 184, 103);
+    font-weight: bold;
+}
+
+.legendary {
+    animation: legendary-anim 2s ease infinite;
+}
+
+.legendary-border {
+    animation: legendary-border-anim 2s ease infinite;
+    border: 5px solid rgb(230, 255, 92);
+}
+
+@keyframes legendary-border-anim {
+    0% { border-color: rgb(230, 255, 92); }
+    40% { border-color: rgb(130, 247, 255); }
+    80% { border-color: rgb(111, 255, 159); }
+    100% { border-color: rgb(230, 255, 92); }
+}
+
+@keyframes legendary-anim {
+    0% { color: rgb(230, 255, 92); }
+    40% { color: rgb(130, 247, 255); }
+    80% { color: rgb(111, 255, 159); }
+    100% { color: rgb(230, 255, 92); }
+}
+
+.mythic {
+    animation: mythic-anim 2s ease infinite;
+}
+
+.mythic-border {
+    animation: mythic-border-anim 2s ease infinite;
+    border: 5px solid rgb(255, 92, 92);
+}
+
+.mythic-shine {
+    position: inherit;
+    animation: mythic-shine-anim 2s ease infinite;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 2;
+}
+
+.mythic-background {
+    animation: mythic-bg-anim 2s ease infinite;
+}
+
+@keyframes mythic-anim {
+    0% { color: rgb(255, 92, 92); }
+    40% { color: rgb(255, 130, 238); }
+    80% { color: rgb(255, 111, 130); }
+    100% { color: rgb(255, 92, 92); }
+}
+
+@keyframes mythic-border-anim {
+    0% { border-color: rgb(255, 92, 92); }
+    40% { border-color: rgb(255, 130, 238); }
+    80% { border-color: rgb(255, 111, 130); }
+    100% { border-color: rgb(255, 92, 92); }
+}
+
+@keyframes mythic-shine-anim {
+    0% { background-color: rgba(255, 92, 92, 0.3); }
+    40% { background-color: rgba(255, 130, 238, 0.3); }
+    80% { background-color: rgba(255, 111, 130, 0.3); }
+    100% { background-color: rgba(255, 92, 92, 0.3); }
+}
+
+@keyframes mythic-bg-anim {
+    0% { background-color: rgba(255, 92, 92, 0.5); }
+    40% { background-color: rgba(255, 130, 238, 0.5); }
+    80% { background-color: rgba(255, 111, 130, 0.5); }
+    100% { background-color: rgba(255, 92, 92, 0.5); }
+}
+
+.special-link-shine {
+    animation: special-link-anim 2s ease infinite;
+}
+
+@keyframes special-link-anim {
+    0% { color: rgb(255, 221, 221); }
+    40% { color: rgb(130, 255, 157); }
+    80% { color: rgb(255, 253, 111); }
+    100% { color: rgb(255, 221, 221); }
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform:scale(1.75);
+    z-index: 10;
+}

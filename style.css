@@ -105,6 +105,7 @@ hr {
     background-color: rgb(40, 40, 40);
     color: white;
     transform: rotateY(180deg);
+    border: 5px solid transparent;
 }
 
 .common {
@@ -119,6 +120,11 @@ hr {
 .rare {
     color: rgb(255, 184, 103);
     font-weight: bold;
+}
+
+.rare-border:hover {
+    border: 5px solid rgb(255, 184, 103);
+    transition: ease-in-out 0.2s;
 }
 
 .legendary {
@@ -211,4 +217,17 @@ hr {
 .zoom:hover {
     transform:scale(1.75);
     z-index: 10;
+}
+
+.imagehover:hover > .image { visibility: visible; transition: all 0.1s; transform:scale(2); }
+
+.image {
+    position: fixed;
+    visibility: hidden;
+    top: calc((50%) - (250px));
+    left: calc((50%) - (250px));
+    width: 500px;
+    height: 500px;
+    z-index: 200;
+    transition: all 0.2s;
 }
